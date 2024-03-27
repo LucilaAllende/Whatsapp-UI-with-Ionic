@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
   },
   {
-    path: 'web',
-    loadChildren: () => import('./pages/layout/layout.module').then( m => m.LayoutPageModule)
-  },
-  {
     path: '',
     redirectTo: 'list',
     pathMatch: 'full'
