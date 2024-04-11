@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'list',
-    loadChildren: () => import('./pages/chats-home/chats-home.module').then( m => m.ChatsPagePageModule)
+    loadChildren: () => import('./pages/chats-home/chats-home.module').then( m => m.ChatsHomePageModule)
   },
   {
     path: 'chat/:name',

@@ -19,4 +19,4 @@ import { SharedComponentsModule } from 'src/app/components/shared-components.mod
   ],
   declarations: [ChatsHomePage]
 })
-export class ChatsPagePageModule {}
+export class ChatsHomePageModule {}
