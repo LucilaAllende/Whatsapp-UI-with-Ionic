@@ -5,16 +5,17 @@
       <ion-button>
         <ion-icon name="search" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button fill="clear" id="popover" >
         <ion-icon name="ellipsis-vertical" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-popover #popover trigger="popover" triggerAction="click">
+      <ng-template>
+        <ion-content class="ion-padding">Hello World!</ion-content>
+      </ng-template>
+    </ion-popover>
   </ion-toolbar>
-</ion-header>
- 
-<ion-content [fullscreen]="true">
-
-  <ion-segment>
+  <ion-segment mode="md" >
     <ion-segment-button value="chats" checked>
       <ion-label>Chats</ion-label>
     </ion-segment-button>
@@ -25,6 +26,9 @@
       <ion-label>Calls</ion-label>
     </ion-segment-button>
   </ion-segment>
+</ion-header>
+ 
+<ion-content [fullscreen]="true">
  
   <app-list-component></app-list-component>
  
