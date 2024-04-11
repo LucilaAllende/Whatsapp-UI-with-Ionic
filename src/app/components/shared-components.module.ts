@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list/list.component';
+import { ChatListComponent } from './chat-list/chat-list.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
-  declarations: [ListComponent],
+  declarations: [ChatListComponent, UserListComponent],
   imports: [
     CommonModule,
     IonicModule,
     RouterModule
   ],
-  exports: [ListComponent]
+  exports: [ChatListComponent, UserListComponent]
 })
 export class SharedComponentsModule { }
