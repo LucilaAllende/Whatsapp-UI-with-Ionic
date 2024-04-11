@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-list-component',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  selector: 'app-chat-list-component',
+  templateUrl: './chat-list.component.html',
+  styleUrls: ['./chat-list.component.scss'],
 })
-export class ListComponent  implements OnInit {
+export class ChatListComponent  implements OnInit {
 
   chats = [
     {
@@ -53,7 +53,7 @@ export class ListComponent  implements OnInit {
 
   openChat(chat: any) {
     console.log('Chat opened', chat);
-    this.router.navigateByUrl(`/chat/${chat}`)
+    this.router.navigateByUrl(`/chat/${chat.name}`)
   }
 
 }
