@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListPageRoutingModule } from './list-routing.module';
+import { ChatsHomePageRoutingModule } from './chats-home-routing.module';
 
-import { ListPage } from './list.page';
+import { ChatsHomePage } from './chats-home.page';
 import { SharedComponentsModule } from 'src/app/components/shared-components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedComponentsModule } from 'src/app/components/shared-components.mod
     CommonModule,
     FormsModule,
     IonicModule,
-    ListPageRoutingModule,
+    ChatsHomePageRoutingModule,
     SharedComponentsModule
   ],
-  declarations: [ListPage]
+  declarations: [ChatsHomePage]
 })
-export class ListPageModule {}
+export class ChatsPagePageModule {}
