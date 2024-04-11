@@ -1,0 +1,9 @@
+ion-segment{
+  background: var(--ion-color-primary);
+  ion-segment-button{
+    --color: var(--ion-color-primary-contrast);
+    --color-checked: var(--ion-color-primary-contrast);
+    --indicator-height: 4px;
+    --indicator-color: var(--ion-color-primary-contrast);
+  }
+}

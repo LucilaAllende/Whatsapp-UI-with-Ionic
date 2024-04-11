@@ -8,7 +8,37 @@ import { Router } from '@angular/router';
 })
 export class ListComponent  implements OnInit {
 
-  chats = ['Max', 'Matt', 'Mike', 'Andrew'];
+  chats = [
+    {
+        "name": "Max",
+        "lastTime": "15:45",
+        "lastText": "Hola, ¿cómo estás?",
+        "notification": 0,
+        "unread": 1
+    },
+    {
+        "name": "Matt",
+        "lastTime": "15:30",
+        "lastText": "¿Qué planes tienes para hoy?",
+        "notification": 0,
+        "unread": 0
+    },
+    {
+        "name": "Mike",
+        "lastTime": "15:18",
+        "lastText": "¿Viste la película que recomendé?",
+        "notification": 0,
+        "unread": 1
+    },
+    {
+        "name": "Andrew",
+        "lastTime": "15:02",
+        "lastText": "Tenemos que ponernos al día pronto.",
+        "notification": 0,
+        "unread": 1
+    }
+  ]
+
   isMobile!: boolean;
 
   constructor(private router: Router) { }

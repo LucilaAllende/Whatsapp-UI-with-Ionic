@@ -11,8 +11,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
 ];
