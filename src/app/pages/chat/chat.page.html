@@ -17,6 +17,38 @@
   </ion-toolbar>
 </ion-header>
  
-<ion-content>
+<ion-content [scrollEvents]="true" >
+  <!-- *ngIf="(chats | async) -->
+  <ion-list lines="none" *ngIf="chats as chats$">
+    <ion-item-group class="chats-group" *ngFor="let chat of chats$" >
+      <app-chat-box [chat]="chat" [currentUserId]="currentUserId" ></app-chat-box>
+    </ion-item-group>
+  </ion-list>
+<!-- 
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
  
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-textarea 
+      autoGrow
+      rows="1"
+      placeholder="Send message"
+      class="ion-text-center"
+      [(ngModel)]="message"
+    >
+    </ion-textarea>
+    <ion-buttons slot="end">
+      <ion-fab-button *ngIf="!isLoading" size="small" color="primary" (click)="sendMessage()">
+        <ion-icon name="send"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button *ngIf="isLoading" size="small" color="primary">
+        <ion-spinner name="crescent" color="white"></ion-spinner>
+      </ion-fab-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
